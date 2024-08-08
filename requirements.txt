@@ -1,0 +1,14 @@
+numpy
+pandas
+matplotlib
+seaborn
+streamlit
+PyPDF2
+python-docx
+langchain
+scikit-learn
+difflib
+detoxify
+gspread
+google-auth
+faiss-cpu

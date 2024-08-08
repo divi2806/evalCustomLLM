@@ -1,5 +1,3 @@
-)# evalCustomLLM
-Evaluate your  custom model answers with the ground truth and calculate it's metrics like faithfulness , relevance , hallucination , toxicity etc. 
 # Custom LLM QA Evaluation
 
 This Streamlit application provides a comprehensive tool for evaluating Question-Answering (QA) systems, with a specific focus on custom Language Model (LLM) QA systems. It offers functionality to process various file types, analyze QA performance, and visualize results.

@@ -7,7 +7,6 @@ PyPDF2
 python-docx
 langchain_community
 scikit-learn
-difflib
 detoxify
 gspread
 google-auth

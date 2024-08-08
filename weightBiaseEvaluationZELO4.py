@@ -79,7 +79,7 @@ if 'text' in locals():
     # Process the text
     text_splitter = CharacterTextSplitter(
         separator="\n",
-        chunk_size=2000,
+        chunk_size=1000,
         chunk_overlap=300,
         length_function=len
     )

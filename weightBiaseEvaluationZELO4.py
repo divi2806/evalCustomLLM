@@ -85,12 +85,8 @@ if 'text' in locals():
     )
     chunks = text_splitter.split_text(text)
     
-    model_id = 'sentence-transformers/all-MiniLM-L6-v2'
-    model_kwargs = {'device': 'cpu'}
-    
     # Create embeddings and vector store
-    embeddings = HuggingFaceEmbeddings(model_name=model_id,
-                                       model_kwargs=model_kwargs)
+    embeddings = HuggingFaceEmbeddings()
     vector_store = FAISS.from_texts(chunks, embeddings)
 
     # New section for uploading questions, ground truths, and Zelo answers

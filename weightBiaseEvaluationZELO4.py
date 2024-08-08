@@ -6,14 +6,15 @@ import seaborn as sns
 import streamlit as st
 from PyPDF2 import PdfReader
 import docx
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from sklearn.metrics.pairwise import cosine_similarity
 from difflib import SequenceMatcher
 from detoxify import Detoxify
 import gspread
 from google.oauth2.service_account import Credentials
+from pydantic import BaseModel, Field
+from langchain_community.vectorstores import FAISS
+from langchain_text_splitters import CharacterTextSplitter
 
 # File reading functions
 def read_pdf(file):
@@ -78,7 +79,7 @@ if 'text' in locals():
     # Process the text
     text_splitter = CharacterTextSplitter(
         separator="\n",
-        chunk_size=1000,
+        chunk_size=2000,
         chunk_overlap=300,
         length_function=len
     )
